@@ -10,33 +10,33 @@ import UIKit
 final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         createTab(
-            viewController: ViewController(),
+            viewController: HomeViewController(),
             imageString: "house",
             title: "Início"
         )
         
         createTab(
-            viewController: ViewController(),
-            imageString: "house",
-            title: "Início"
+            viewController: MapsViewController(),
+            imageString: "map",
+            title: "Mapa"
         )
         
         createTab(
-            viewController: ViewController(),
-            imageString: "house",
-            title: "Início"
+            viewController: FavoritesViewController(),
+            imageString: "heart",
+            title: "Favoritos"
         )
         
         createTab(
-            viewController: ViewController(),
-            imageString: "house",
-            title: "Início"
+            viewController: DiscoveryViewController(),
+            imageString: "safari",
+            title: "Descobrir"
         )
         
         createTab(
-            viewController: ViewController(),
-            imageString: "house",
-            title: "Início"
+            viewController: ConfigurationViewController(),
+            imageString: "gearshape",
+            title: "Ajustes"
         )
         
         customizeTabBarApperance()
