@@ -9,6 +9,8 @@ import UIKit
 
 final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         createTab(
             viewController: HomeViewController(),
             imageString: "house",
@@ -68,6 +70,14 @@ final class MainTabBarController: UITabBarController {
             selectedImage: UIImage(systemName: "\(imageString).fill")
         )
         
-        viewControllers?.append(navController)
+        addNavControllerInViewControllerList(navController)
+    }
+    
+    private func addNavControllerInViewControllerList(_ navController: UINavigationController) {
+        if viewControllers == nil {
+            viewControllers = [navController]
+        } else {
+            viewControllers?.append(navController)
+        }
     }
 }
